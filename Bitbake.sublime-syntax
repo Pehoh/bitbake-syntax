@@ -83,7 +83,7 @@ contexts:
       scope: support.constant.bitbake
 
   short_variables:
-    - match: \b(PR|PV\PN)\b
+    - match: \b(PR|PV|PN)\b
       scope: support.constant.bitbake
 
 
