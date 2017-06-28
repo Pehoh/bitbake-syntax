@@ -44,6 +44,9 @@ contexts:
     - match: '\s*(inherit|include|require)\s+(?=[[:alpha:]])'
       scope: keyword.control.import.bitbake
 
+    - match: '\b(if|fi)\b'
+      scope: keyword.control.import.bitbake
+
   double_quoted_string:
     - meta_scope: string.quoted.double.bitbake
     - match: '\\.'
@@ -79,7 +82,9 @@ contexts:
                 |MACHINE_FEATURES|IMAGE_FSTYPES|UBOOT_BINARY|EXTRA_IMAGEDEPENDS|MACHINE_FEATURES|
                 |KERNEL_IMAGETYPE|KERNEL_DEVICETREE|PREFERRED_PROVIDER|PREFERRED_VERSION|
                 |DEFAULTTUNE|IMAGE_CLASSES|SUMMARY|COMPATIBLE_HOST|FILES|PACKAGES|RDEPENDS|
-                |EXTRA_OECONF|EXTRA_OEMAKE)_?"
+                |EXTRA_OECONF|EXTRA_OEMAKE|LOCALVERSION|KERNEL_MODULE_AUTOLOAD|SOC_FAMILY|
+                |UBOOT_MACHINE|SERIAL_CONSOLE|INITSCRIPT_NAME|INITSCRIPT_PARAMS|
+                |IMAGE_INSTALL|EXTRA_IMAGE_FEATURES|IMAGE_FEATURES|IMAGE_LINGUAS)_?"
       scope: support.constant.bitbake
 
   short_variables:
